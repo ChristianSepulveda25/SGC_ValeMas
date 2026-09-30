@@ -1,0 +1,376 @@
+:root {
+  --color-dark-green: #004924;
+  --color-light-green: #84C225;
+  --color-bg-main: #f4f7f6; /* Soft light background */
+  --color-bg-card: #ffffff;
+  --color-text-main: #1a1a1a; /* Dark text for readability */
+  --color-text-muted: #555555;
+  
+  --font-family: 'Montserrat', sans-serif;
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-weight: 900; /* Montserrat Black */
+}
+
+.highlight {
+  color: var(--color-light-green);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  z-index: 1000;
+  transition: background-color var(--transition-speed), padding var(--transition-speed), box-shadow var(--transition-speed);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar.scrolled {
+  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  transition: transform var(--transition-speed);
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--color-text-main);
+  text-decoration: none;
+  font-weight: 600; /* Montserrat Semibold */
+  font-size: 1rem;
+  transition: color var(--transition-speed);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-light-green);
+  transition: width var(--transition-speed);
+}
+
+.nav-links a:hover {
+  color: var(--color-light-green);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-light-green), var(--color-dark-green));
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(132, 194, 37, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(132, 194, 37, 0.5);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-dark-green);
+  border: 2px solid var(--color-dark-green);
+}
+
+.btn-secondary:hover {
+  background: var(--color-dark-green);
+  color: #fff;
+}
+
+.btn-light-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.btn-light-outline:hover {
+  background: #fff;
+  color: var(--color-dark-green);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(0, 73, 36, 0.85) 0%, rgba(132, 194, 37, 0.4) 100%), url('/fondo-estacion.jpg') center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 1000px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+/* General Sections */
+section {
+  padding: 6rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark-green);
+}
+
+.vale-plus-logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.section-title p {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-title p b {
+  color: var(--color-dark-green);
+  font-weight: 600;
+}
+
+/* Vale+ Section */
+.vale-plus {
+  background: linear-gradient(to bottom, #ffffff, var(--color-bg-main));
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed), border-color var(--transition-speed);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-light-green);
+  box-shadow: 0 15px 35px rgba(0, 73, 36, 0.1);
+}
+
+.card .icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark-green);
+}
+
+.card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.catalog-action {
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+.catalog-btn {
+  font-size: 1.1rem;
+  padding: 1.2rem 2.5rem;
+}
+
+/* Contact Section */
+.contact {
+  background: var(--color-bg-main);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-bg-card);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.contact-info {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  color: var(--color-dark-green);
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.contact-info strong {
+  color: var(--color-text-main);
+}
+
+.contact-info a {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.contact-map {
+  min-height: 400px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: var(--color-dark-green);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info {
+    padding: 2rem;
+  }
+  
+  .contact-map {
+    min-height: 300px;
+  }
+}
+

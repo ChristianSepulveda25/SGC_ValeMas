@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estación de Gasolina | Vale+</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container nav-content">
+        <a href="#home" class="logo">
+          <img src="/logo.png" alt="De La Costa Servicio Gasolinero" class="logo-img">
+        </a>
+        <nav class="nav-links">
+          <a href="#home">Inicio</a>
+          <a href="#vale-plus">Vale+</a>
+          <a href="#contact">Contáctanos</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="container hero-content">
+          <h1>Cada <span class="highlight">carga</span> te acerca a tu próxima <span class="highlight">recompensa</span>.</h1>
+          <p>Servicio rápido, combustible de primera calidad y beneficios exclusivos con nuestro programa Vale+. Tu viaje comienza con nosotros.</p>
+          <div class="hero-buttons">
+            <a href="#vale-plus" class="btn btn-primary">Descubre Vale+</a>
+            <a href="/catalogo-recompensas.pdf" target="_blank" class="btn btn-light-outline">Catálogo de recompensas</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vale+ Section -->
+      <section id="vale-plus" class="vale-plus">
+        <div class="container">
+          <div class="section-title">
+            <img src="/logo-vale-plus.png" alt="Programa Vale+" class="vale-plus-logo">
+            <p><b>Carga, suma, canjea</b> y <b>disfruta más</b> con <b>Vale+</b>.</p>
+          </div>
+          
+          <div class="cards-grid">
+            <div class="card">
+              <div class="icon">⛽</div>
+              <h3>1. Recarga</h3>
+              <p>Ven a tu estación favorita y llena el tanque de tu vehículo. Cada litro cuenta.</p>
+            </div>
+            <div class="card">
+              <div class="icon">⭐</div>
+              <h3>2. Acumula Puntos</h3>
+              <p>Muestra tu membresía Vale+ y suma puntos automáticamente en cada visita.</p>
+            </div>
+            <div class="card">
+              <div class="icon">🎁</div>
+              <h3>3. Gana Premios</h3>
+              <p>Canjea tus puntos por descuentos, artículos, lavados y muchas recompensas más.</p>
+            </div>
+          </div>
+
+          <div class="catalog-action">
+            <a href="/catalogo-recompensas.pdf" target="_blank" class="btn btn-secondary catalog-btn">
+              Consulta nuestro Catálogo de recompensas
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Ubicación y <span class="highlight">Contacto</span></h2>
+            <p>Visítanos en nuestra estación o comunícate con nosotros.</p>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h3>Estación Crucero de Sentispac</h3>
+              <p><strong>Dirección:</strong><br>
+                Carretera Santiago - Los Corchos<br>
+                Km. 16 N°179 Poniente.<br>
+                El Botadero, Santiago Ixcuintla, Nayarit.
+              </p>
+              <p><strong>Teléfono de Facturación:</strong><br>
+                <a href="tel:3231749522" class="highlight">323 174 9522</a>
+              </p>
+            </div>
+            <div class="contact-map">
+              <iframe 
+                src="https://maps.google.com/maps?q=Servicio+gasolinero+de+la+costa,+Santiago+Ixcuintla,+Nayarit&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Servicio Gasolinero de la Costa. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
