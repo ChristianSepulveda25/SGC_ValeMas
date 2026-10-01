@@ -200,7 +200,7 @@ h1, h2, h3, h4 {
 
 /* General Sections */
 section {
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 
 .section-title {
@@ -372,5 +372,32 @@ section {
   .contact-map {
     min-height: 300px;
   }
+}
+
+.catalog-action {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.legal-links {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.legal-links a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.legal-links span {
+  margin: 0 8px;
+  color: #aaa;
 }
 
